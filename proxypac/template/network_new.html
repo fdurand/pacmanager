@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+
+{% block title %}
+		<img src="/img/network-idle.png"> {{ action }} {% trans "network" %}
+{% endblock %}
+
+{% block content %}
+{{ error }}
+{% if user.is_staff %}
+    <form action="." method="POST">{% csrf_token %}
+{% endif %}
+        <table class="gene">
+            {{ form.as_table }}
+        </table>
+        <table><tbody><tr valign="top"><td><p><input type="submit" value="{% trans "Save" %}"></p></td></p><td><INPUT type="button" value="{% trans "Previous" %}" onclick="history.back()"></td><tbody/></table>
+    </form>
+{% endblock %}
+
+{% block action %}
+<fieldset id='fieldset'><legend><img src='/img/bullet_red.png'>{% trans "Action" %}</legend>
+<ul>
+
+</ul>
+</fieldset>
+{% endblock %}
+

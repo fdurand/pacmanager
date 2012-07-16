@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+
+{% block title %}
+		<img src="/img/application_edit.png"> {% trans "Script test" %}
+{% endblock %}
+
+{% block content %}
+    <form action="." method="POST">{% csrf_token %}
+        <table class="gene">
+            {{ form.as_table }}
+        </table>
+        <table><tbody><tr valign="top"><td><p><input type="submit" value="{% trans "Save" %}"></p></td></p><td><INPUT type="button" value="{% trans "Previous" %}" onclick="history.back()"></td><tbody/></table>
+    </form>
+	{% if proxy %}
+		<table class="gene">
+			<tr><th><label for="Network">{% trans "Description:" %}</label></th><td><input type="text" name="network" value="{{ network_save.description }}"/></td></tr>
+			<tr><th><label for="Network">{% trans "Network:" %}</label></th><td><input type="text" name="network" value="{{ network_save.address_ip }}/{{ network_save.mask }}"/></td></tr>
+			<tr><th><label for="Proxy">{% trans "Proxy:" %}</label></th><td><input type="text" name="proxy" value="{{ proxy }}"/></td></tr>
+        </table>
+	{% endif %}
+{% endblock %}
+
+{% block action %}
+<fieldset id='fieldset'><legend><img src='/img/bullet_red.png'>{% trans "Action" %}</legend>
+<ul>
+
+</ul>
+</fieldset>
+{% endblock %}
+

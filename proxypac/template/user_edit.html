@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+
+{% block title %}
+	<img src="/img/unused-security-keys.png"> {% trans "Edit user" %}
+{% endblock %}
+
+{% block content %}
+    <h1>{% trans "Add" %}</h1>
+	{% if error %}
+	{{ error }}
+	{% endif %}
+	{% if user.is_staff %}
+    <form action="." method="POST">{% csrf_token %}
+	{% endif %}
+        <table class="gene">
+            {{ form.as_table }}
+        </table>
+        <table><tbody><tr valign="top"><td><p><input type="submit" value="{% trans "Send" %}"></td></p><td><INPUT type="button" value="{% trans "Back" %}" onclick="history.back()"></td><tbody/></table>
+    </form>
+{% endblock %}
+
+{% block action %}
+<fieldset id='fieldset'><legend><img src='/img/bullet_red.png'>{% trans "Action" %}</legend>
+
+</fieldset>
+{% endblock %}

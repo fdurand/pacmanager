@@ -1,0 +1,398 @@
+@import url('common.css');
+
+body {
+	# margin:10px 10px 0px 10px;
+	padding:0;
+	margin: 0;
+}
+.hll { background-color: #ffffcc }
+.c { color: #8f5902; font-style: italic } /* Comment */
+.err { color: #a40000; border: 1px solid #ef2929 } /* Error */
+.g { color: #000000 } /* Generic */
+.k { color: #204a87; font-weight: bold } /* Keyword */
+.l { color: #000000 } /* Literal */
+.n { color: #000000 } /* Name */
+.o { color: #ce5c00; font-weight: bold } /* Operator */
+.x { color: #000000 } /* Other */
+.p { color: #000000; font-weight: bold } /* Punctuation */
+.cm { color: #8f5902; font-style: italic } /* Comment.Multiline */
+.cp { color: #8f5902; font-style: italic } /* Comment.Preproc */
+.c1 { color: #8f5902; font-style: italic } /* Comment.Single */
+.cs { color: #8f5902; font-style: italic } /* Comment.Special */
+.gd { color: #a40000 } /* Generic.Deleted */
+.ge { color: #000000; font-style: italic } /* Generic.Emph */
+.gr { color: #ef2929 } /* Generic.Error */
+.gh { color: #000080; font-weight: bold } /* Generic.Heading */
+.gi { color: #00A000 } /* Generic.Inserted */
+.go { color: #000000; font-style: italic } /* Generic.Output */
+.gp { color: #8f5902 } /* Generic.Prompt */
+.gs { color: #000000; font-weight: bold } /* Generic.Strong */
+.gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+.gt { color: #a40000; font-weight: bold } /* Generic.Traceback */
+.kc { color: #204a87; font-weight: bold } /* Keyword.Constant */
+.kd { color: #204a87; font-weight: bold } /* Keyword.Declaration */
+.kn { color: #204a87; font-weight: bold } /* Keyword.Namespace */
+.kp { color: #204a87; font-weight: bold } /* Keyword.Pseudo */
+.kr { color: #204a87; font-weight: bold } /* Keyword.Reserved */
+.kt { color: #204a87; font-weight: bold } /* Keyword.Type */
+.ld { color: #000000 } /* Literal.Date */
+.m { color: #0000cf; font-weight: bold } /* Literal.Number */
+.s { color: #4e9a06 } /* Literal.String */
+.na { color: #c4a000 } /* Name.Attribute */
+.nb { color: #204a87 } /* Name.Builtin */
+.nc { color: #000000 } /* Name.Class */
+.no { color: #000000 } /* Name.Constant */
+.nd { color: #5c35cc; font-weight: bold } /* Name.Decorator */
+.ni { color: #ce5c00 } /* Name.Entity */
+.ne { color: #cc0000; font-weight: bold } /* Name.Exception */
+.nf { color: #000000 } /* Name.Function */
+.nl { color: #f57900 } /* Name.Label */
+.nn { color: #000000 } /* Name.Namespace */
+.nx { color: #000000 } /* Name.Other */
+.py { color: #000000 } /* Name.Property */
+.nt { color: #204a87; font-weight: bold } /* Name.Tag */
+.nv { color: #000000 } /* Name.Variable */
+.ow { color: #204a87; font-weight: bold } /* Operator.Word */
+.w { color: #f8f8f8; text-decoration: underline } /* Text.Whitespace */
+.mf { color: #0000cf; font-weight: bold } /* Literal.Number.Float */
+.mh { color: #0000cf; font-weight: bold } /* Literal.Number.Hex */
+.mi { color: #0000cf; font-weight: bold } /* Literal.Number.Integer */
+.mo { color: #0000cf; font-weight: bold } /* Literal.Number.Oct */
+.sb { color: #4e9a06 } /* Literal.String.Backtick */
+.sc { color: #4e9a06 } /* Literal.String.Char */
+.sd { color: #8f5902; font-style: italic } /* Literal.String.Doc */
+.s2 { color: #4e9a06 } /* Literal.String.Double */
+.se { color: #4e9a06 } /* Literal.String.Escape */
+.sh { color: #4e9a06 } /* Literal.String.Heredoc */
+.si { color: #4e9a06 } /* Literal.String.Interpol */
+.sx { color: #4e9a06 } /* Literal.String.Other */
+.sr { color: #4e9a06 } /* Literal.String.Regex */
+.s1 { color: #4e9a06 } /* Literal.String.Single */
+.ss { color: #4e9a06 } /* Literal.String.Symbol */
+.bp { color: #3465a4 } /* Name.Builtin.Pseudo */
+.vc { color: #000000 } /* Name.Variable.Class */
+.vg { color: #000000 } /* Name.Variable.Global */
+.vi { color: #000000 } /* Name.Variable.Instance */
+.il { color: #0000cf; font-weight: bold } /* Literal.Number.Integer.Long */
+
+
+body,th,td,p,div,span,a,input,select,textarea,ul,ol,dl,h1,h2,h3,h4,h5,h6,li,big,small,blockquote{font-family:verdana,arial,helvetica,sans-serif}
+body,th,td,p,div,span,a,ul,ol,dl,li,select,input,textarea,blockquote{font-size:11px}
+body,th,td,p{color:#000}
+code,kbd,tt,pre,code a,kbd a,tt a,pre a,code span,kbd span,tt span,pre span{font-family:courier,"courier new";font-size:12px}
+code,kbd,tt,pre,code span,kbd span,tt span,pre span{color:#000}
+
+
+h1 {font-size: 155%;  font-weight: normal; padding: 0px; margin: 0px; margin-bottom: 15px; font-family:"Trebuchet MS",verdana,arial,helvetica,sans-serif}
+h2 {font-size: 130%;  font-weight: normal; padding-bottom: 10px; text-decoration : underline}
+h3 {font-size: 100%;}
+
+img{border: 0px}
+img {vertical-align:middle;}
+
+a{text-decoration:none}
+a:visited{color:#000}
+a:link,a.named:visited {color:#000}
+a {cursor: pointer;}
+a:hover {text-decoration:underline}
+
+hr {height:1px; color:#999999}
+
+form{display:inline}
+
+ul {
+	list-style-image: url("../img/puce.png");
+	margin: 0px;
+	margin-top: 3px;
+	padding: 0px;
+	padding-left: 15px;
+}
+
+
+fieldset {
+	border: 1px solid #ccc;
+	-moz-border-radius: 10px;
+	padding: 10px;
+}
+
+fieldset legend {
+	font-size: 110%;
+}
+
+.main {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	width: 77%;
+}
+
+td.title {
+	-moz-border-radius: 5px;
+	padding: 5px;
+	background: #eeeeee;
+}
+
+.main table {
+	width: 100%;
+}
+
+#logout, #logon, #action {
+	float: right;
+	width: 170px;
+}
+
+#logout input, #logon input, #action input {
+	margin-top: 5px;
+	width: 100%;
+}
+
+#logo {
+	margin-right: 2em;
+	margin-bottom: 1em;
+}
+
+
+fieldset.logon legend, fieldset.logout legend {
+	background-repeat: no-repeat;
+	padding-left: 17px;
+	padding-bottom: 5px;
+}
+
+fieldset.logon {
+	padding: 10px;
+	padding-top: 0px;
+}
+
+fieldset.logon legend {
+	background-image: url('../img/connect_established.png');
+}
+
+fieldset.logout legend {
+	background-image: url('../img/connect_no.png');
+}
+
+fieldset.logon legend img, fieldset.logout legend img {
+	display: none;
+}
+
+#action div {
+	padding: 5px;
+}
+
+.error {
+	font-style: oblique;
+}
+
+#error {
+	padding: 5em;
+	text-align: center;
+	font-style: oblique;
+	color: red;
+	font-size: 120%;
+}
+
+
+#splash p {
+	margin-top: 2em;
+	font-style: oblique;
+	color: #333333;
+	text-align: justify;
+	margin-left: 2em;
+	margin-right: 19em;
+}
+
+input[type=text], textarea {
+	border-bottom: solid 1px #cccccc;
+	border-right: solid 1px #cccccc;
+	padding: 2px;
+	-moz-border-radius: 5px;
+	border: solid 1px #cccccc;
+	padding: 2px;
+        width: 100%;
+}
+
+select {
+	border-bottom: solid 1px #cccccc;
+	border-right: solid 1px #cccccc;
+	padding: 2px;
+	-moz-border-radius: 5px;
+	border: solid 1px #cccccc;
+	padding: 2px;
+
+}
+
+input, textarea {
+	border-bottom: solid 1px #cccccc;
+	border-right: solid 1px #cccccc;
+	padding: 2px;
+	-moz-border-radius: 5px;
+	border: solid 1px #cccccc;
+	padding: 2px;
+}
+
+td.input {
+	text-align: left;
+	width: 50%;
+}
+
+td.select {
+	text-align: left;
+	width: 50%;
+}
+
+.textinput {
+}
+
+input:hover{
+	background: #ffffff;
+}
+
+#page, #custom {
+	width: 950px;
+	border-left: 1px solid black;
+	border-right: 1px solid black;
+}
+
+
+div.fileinputs {
+        position: relative;
+        height: 30px;
+        width: 300px;
+}
+
+input.file.hidden {
+        position: relative;
+        text-align: right;
+        -moz-opacity:0 ;
+        filter:alpha(opacity: 0);
+        opacity: 0;
+        z-index: 2;
+}
+
+div.fakefile {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 350px;
+        padding: 0;
+        margin: 0;
+        z-index: 1;
+        line-height: 90%;
+}
+
+div.fakefile input {
+        margin-left: 0;
+}
+
+
+table.gene {
+       position: relative;
+       padding-top: 0px;
+       padding-bottom: 20px;
+       width: 75%;
+}
+
+div.source {
+       padding-top: 0px;
+       width: 300px;
+}
+
+th {
+	-moz-border-radius: 5px;
+	font-style: oblique;
+	font-weight: normal;
+	text-align: left;
+	background: #dddddd;
+	background-repeat: repeat-x;
+	padding: 5px;
+}
+
+
+.submit {
+	padding-top: 10px;
+	text-align: right;
+}
+
+.menu { 
+        width: 1px; vertical-align: top;
+}
+
+#menu {
+	width: 140px;
+	display: none;
+}
+
+#logo {
+	float: left;
+}
+
+#licence {
+	display: none;
+	margin-right: 1em; text-align: right;
+}
+
+#header {
+	border-top: 1px solid #bbbbbb;
+}
+
+#footer {
+	margin: 0;
+	clear: both;
+	margin-top: 1em;
+	height: 2.5em;
+	background-image: url('../img/brushed.jpeg');
+	background-repeat: repeat-x;
+	border-top: 1px solid #aaaaaa;
+	border-bottom: 1px solid #777777;
+}
+
+#copyright {
+	padding-right: 1em;
+	text-align: right;
+	padding-top: 1em;
+	color: #333333;
+	margin-top: 1em;
+	border-top: 1px solid #cccccc;
+	padding-bottom: 1em;
+}
+
+#custom {
+	text-align: right;
+	height: 3em;	
+	background-image: url('../img/brushed.jpeg');
+	background-repeat: repeat-x;
+	border-bottom: 1px solid #777777;
+}
+
+#custom img {
+	margin-top: 2px;
+	margin-right: 5px;
+}
+
+#siteNav { width: 130px}
+#siteNav li { display: inline; /* for IE5 and IE6 */ }
+#siteNav ul { margin: 0px; padding: 0px; width: auto; margin: 0px; padding: 0px; }
+#siteNav ul a { background-color: #DDDDDD; width: auto; display: block; line-height: 26px; padding-left: 13px; border-top: 1px solid #FFFFFF; border-bottom: 1px solid #BBBBBB; cursor: pointer; text-decoration: none; color: #000000; }
+
+#siteNav ul a:hover { background-color: #CCCCCC; }		
+#siteNav ul ul a, #siteNav ul ul a:hover, #siteNav ul ul strong { background-color: #F7F7F7; width: auto; border: none; line-height: 20px; }		
+#siteNav ul ul strong { padding-left: 13px; padding-top: 3px; font-weight: normal; color: #67676B; display: block; }
+#siteNav ul ul a { font-size: 105%; color: #2C3C6A;}		
+#siteNav ul ul ul a { font-size: 110%; width: 137px; padding-left: 23px; color: #2C3C6A; background-image: url(/images/interface/menu-arrow.gif); background-repeat: no-repeat; }
+#siteNav ul ul ul a, #siteNav ul ul ul a:hover { width: 137px; }
+
+#siteNav ul ul a:hover, #siteNav a:hover.subTwo, #siteNav a.subOne:hover { color: #2571C2; }	
+#siteNav ul ul a.last { padding-bottom: 5px; }	
+
+
+.help {
+	margin: 2em;
+	margin-right: 250px;
+	padding: 0.6em;
+	padding-left: 3em;
+	-moz-border-radius: 5px;
+	background: #e6e7ba;
+}
+
+.help a {
+	color: #000080;
+}

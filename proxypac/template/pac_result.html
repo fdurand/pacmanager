@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load pygmentize %}
+
+
+{% block title %}
+		<img src="/img/application_edit.png"> {% trans "script" %} "{{ network.description }}"
+{% endblock %}
+
+{% block content %}
+<div style="width:600; height:540; overflow:auto;">
+{% autoescape off %}
+	{{ pac|pygmentize }}
+{% endautoescape %}
+</div>
+<hr size="10" width="50%" noshade >
+<img src="/img/application_edit.png"> {% trans "Access" %} "{{ network.description }}"
+<table class="gene">
+  <tbody>
+    <tr>
+      <td>{{ form3.REMOTE_ADDR.label_tag }}</td>
+      <td>{{ form3.HTTP_X_FORWARDED_FOR.label_tag }}</td>
+      <td>{{ form3.HTTP_USER_AGENT.label_tag }}</td>
+      <td>{{ form3.HTTP_VIA.label_tag }}</td>
+      <td>{{ form3.PATH_INFO.label_tag }}</td>
+    </tr>  
+{% for form2 in form %}
+    <tr>
+      <td>{{ form2.REMOTE_ADDR }}</td>
+      <td>{{ form2.HTTP_X_FORWARDED_FOR }}</td>
+      <td>{{ form2.HTTP_USER_AGENT }}</td>
+      <td>{{ form2.HTTP_VIA }}</td>
+      <td>{{ form2.PATH_INFO }}</td>
+    </tr>
+{% endfor %}
+  </tbody>
+</table>
+
+<hr size="10" width="50%" noshade >
+<img src="/img/application_edit.png"> {% trans "Statistics" %} "{{ network.description }}"
+<p>
+<img src='/img/rrd/{{ network.address_ip }}.png'>
+
+{% endblock %}
+
+{% block action %}
+<fieldset id='fieldset'><legend><img src='/img/bullet_red.png'>{% trans "Action" %}</legend>
+<ul>
+
+</ul>
+</fieldset>
+{% endblock %}
+

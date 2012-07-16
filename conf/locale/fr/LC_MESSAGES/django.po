@@ -1,0 +1,96 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-08-06 22:03+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: proxypac/forms.py:41
+msgid "Pac script"
+msgstr "Script pac"
+
+#: proxypac/template/base.html:9 proxypac/template/logon.html:7
+msgid "Authentication"
+msgstr "Authentification"
+
+#: proxypac/template/base.html:23
+msgid "Logout"
+msgstr "Déconnexion"
+
+#: proxypac/template/base.html:41
+msgid "Manage rules"
+msgstr "Gestions des règles"
+
+#: proxypac/template/base.html:43
+msgid "Networks"
+msgstr "Réseaux"
+
+#: proxypac/template/base.html:44
+msgid "Test"
+msgstr "Test"
+
+#: proxypac/template/logon.html:12
+msgid "Logon"
+msgstr "Connexion"
+
+#: proxypac/template/network.html:6
+msgid "Manage networks"
+msgstr "Gestions des réseaux"
+
+#: proxypac/template/network.html:11
+msgid "Description"
+msgstr "Description"
+
+#: proxypac/template/network.html:12
+msgid "Network"
+msgstr "Réseau"
+
+#: proxypac/template/network.html:17
+msgid "Remove network"
+msgstr "Supprimer le réseau"
+
+#: proxypac/template/network.html:17
+msgid "Edit network"
+msgstr "Editer le réseau"
+
+#: proxypac/template/network.html:22 proxypac/template/network_new.html:15
+#: proxypac/template/pac_new.html:15 proxypac/template/test.html:14
+msgid "Previous"
+msgstr "Précédent"
+
+#: proxypac/template/network.html:26 proxypac/template/network_new.html:20
+#: proxypac/template/pac_new.html:20 proxypac/template/test.html:26
+msgid "Action"
+msgstr "Action"
+
+#: proxypac/template/network.html:29
+msgid "Add"
+msgstr "Ajouter"
+
+#: proxypac/template/network_new.html:6
+msgid "Add networks"
+msgstr "Ajouter un réseau"
+
+#: proxypac/template/network_new.html:15 proxypac/template/pac_new.html:15
+#: proxypac/template/test.html:14
+msgid "Save"
+msgstr "Sauver"
+
+#: proxypac/template/pac_new.html:6
+msgid "Add script"
+msgstr "Ajouter un script"
+
+#: proxypac/template/test.html:6
+msgid "Script test"
+msgstr "Test de script"

@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+
+{% block title %}
+	<img src="/img/user.png"> {% trans "Users Administration" %}
+{% endblock %}
+{% block content %}
+	<table class="gene">
+	<tr>
+	<th>{% trans "User" %}</th>
+	<th>{% trans "Email" %}</th>
+	<th colspan=3 style="width: 40px"></th>
+	</tr>
+{% for object in user_list %}
+	<tr><td>{{ object.username }}</td><td>{{ object.email }}</td>{% if user.is_staff %}<td><a href="/user/del/{{ object.username }}/" onClick="if(confirm('{% trans "Are you shure you want to delete "%}{{ object.username }} ?')){}else{return false}"><img src="/img/user_delete.png" title="{% trans "Remove user" %}"></td>{% endif %}<td><a href="/user/edit/{{ object.username }}/"><img src="/img/user_edit.png" title="{% trans "Edit user" %}"></a></td></tr>
+{% endfor %}
+	</td>
+	</table>
+<INPUT type="button" value="{% trans "Back" %}" onclick="history.back()">
+{% endblock %}
+
+{% block action %}
+<fieldset id='fieldset'><legend><img src='/img/bullet_red.png'>{% trans "Action" %}</legend>
+{% if user.is_staff %}
+<ul>
+		<li><img src="/img/user_add.png" title="{% trans "Add user" %}"><a href="/user/new/">{% trans "Add user" %}</a></li>
+</ul>
+{% endif %}
+</fieldset>
+{% endblock %}

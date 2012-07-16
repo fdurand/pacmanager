@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load mptt_tags %}
+
+{% block title %}
+	<img src="/img/network-idle.png"> {% trans "Manage networks" %}
+{% endblock %}
+{% block content %}
+
+<ul class="root">
+    {% recursetree nodes %}
+        <li>
+                    <a href="/network/result/{{ node.id }}/">    {{ node.description }} </a> <span style="color:red" title="Count Hits">{{ node.hits }}</span>
+            {% if not node.is_leaf_node %}
+                <ul class="children">
+                    {{ children }}
+                </ul>
+            {% endif %}
+        </li>
+    {% endrecursetree %}
+</ul>
+	<table class="gene">
+	<tr>
+	<th>{% trans "Description" %}</th>
+	<th>{% trans "Network" %}</th>
+	<th colspan=4 style="width: 40px"></th>
+	</tr>
+{% if network %}
+{% for object in network %}
+	<tr><td style="vertical-align: top;">{{ object.description }}</td><td style="vertical-align: top;">{{ object.address_ip }}/{{ object.mask }}</td>{% if user.is_staff %}<td><a href="/network/del/{{ object.id }}/" onClick="if(confirm('{% trans "Are you shure you want to delete "%}{{ object.description }} ?')){}else{return false}"><img src="/img/delete.png" title="{% trans "Remove network" %}"></td>{% endif %}<td><a href="/network/edit/{{ object.id }}/"><img src="/img/world_edit.png" title="{% trans "Edit network" %}"></td><td><a href="/network/rule/{{ object.id }}/"><img src="/img/script_edit.png" title="{% trans "Edit rule" %}"></td></tr>
+{% endfor %}
+{% endif %}
+	</td>
+	</table>
+	<INPUT type="button" value="{% trans "Previous" %}" onclick="history.back()">
+{% endblock %}
+	{% block action %}
+<fieldset id='fieldset'><legend><img src='/img/bullet_red.png'>{% trans "Action" %}</legend>
+<ul>
+{% if user.is_staff %}
+		<li><img src="/img/add.png" title="{% trans "Add" %}"><a href="/network/new/">{% trans "Add" %}</a></li>
+		<li><img src="/img/database_refresh.png" title="{% trans "Reset counters" %}"><a href="/network/reset/">{% trans "Reset counters" %}</a></li>
+{% endif %}
+</ul>
+</fieldset>
+{% endblock %}
+

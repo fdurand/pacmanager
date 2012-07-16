@@ -1,0 +1,96 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-08-06 22:03+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: proxypac/forms.py:41
+msgid "Pac script"
+msgstr ""
+
+#: proxypac/template/base.html:9 proxypac/template/logon.html:7
+msgid "Authentication"
+msgstr ""
+
+#: proxypac/template/base.html:23
+msgid "Logout"
+msgstr ""
+
+#: proxypac/template/base.html:41
+msgid "Manage rules"
+msgstr ""
+
+#: proxypac/template/base.html:43
+msgid "Networks"
+msgstr ""
+
+#: proxypac/template/base.html:44
+msgid "Test"
+msgstr ""
+
+#: proxypac/template/logon.html:12
+msgid "Logon"
+msgstr ""
+
+#: proxypac/template/network.html:6
+msgid "Manage networks"
+msgstr ""
+
+#: proxypac/template/network.html:11
+msgid "Description"
+msgstr ""
+
+#: proxypac/template/network.html:12
+msgid "Network"
+msgstr ""
+
+#: proxypac/template/network.html:17
+msgid "Remove network"
+msgstr ""
+
+#: proxypac/template/network.html:17
+msgid "Edit network"
+msgstr ""
+
+#: proxypac/template/network.html:22 proxypac/template/network_new.html:15
+#: proxypac/template/pac_new.html:15 proxypac/template/test.html:14
+msgid "Previous"
+msgstr ""
+
+#: proxypac/template/network.html:26 proxypac/template/network_new.html:20
+#: proxypac/template/pac_new.html:20 proxypac/template/test.html:26
+msgid "Action"
+msgstr ""
+
+#: proxypac/template/network.html:29
+msgid "Add"
+msgstr ""
+
+#: proxypac/template/network_new.html:6
+msgid "Add networks"
+msgstr ""
+
+#: proxypac/template/network_new.html:15 proxypac/template/pac_new.html:15
+#: proxypac/template/test.html:14
+msgid "Save"
+msgstr ""
+
+#: proxypac/template/pac_new.html:6
+msgid "Add script"
+msgstr ""
+
+#: proxypac/template/test.html:6
+msgid "Script test"
+msgstr ""

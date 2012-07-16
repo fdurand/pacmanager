@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load pygmentize %}
+
+{% block title %}
+		<img src="/img/application_edit.png"> {{ action }} {% trans "script" %} "{{ network.description }}"
+{% endblock %}
+
+{% block content %}
+{{ parse }}
+{% if user.is_staff %}
+    <form action="." method="POST">{% csrf_token %}
+{% endif %}
+<span title="Synthaxe">
+        <table class="gene">
+            {{ form.as_table }}
+        </table>
+        <table><tbody><tr valign="top"><td><p><input type="submit" value="{% trans "Save" %}"></p></td></p><td><INPUT type="button" value="{% trans "Previous" %}" onclick="history.back()"></td><tbody/></table>
+</span>
+	</form>
+	<hr size="10" width="50%" noshade >
+	{{ parse_global }}
+<div style="width:600; height:540; overflow:auto;">
+{% autoescape off %}
+	{{ pac2|pygmentize }}
+{% endautoescape %}
+</div>
+{% endblock %}
+
+{% block action %}
+<fieldset id='fieldset'><legend><img src='/img/bullet_red.png'>{% trans "Action" %}</legend>
+<ul>
+
+</ul>
+</fieldset>
+{% endblock %}
+

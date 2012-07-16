@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+{% load i18n %}
+{% get_current_language as LANGUAGE_CODE %}
+{% get_available_languages as LANGUAGES %}
+{% get_current_language_bidi as LANGUAGE_BIDI %}
+
+
+{% block auth %}
+<fieldset id='fieldset' class='logon'><legend><img src='/img/connect_established.png'>&nbsp;{% trans "Authentication" %}</legend>
+<form action='/logout/' method='POST'>{% csrf_token %}
+<center>{{ user }}</center>
+<input type='submit' class='inputbutton' value='{% trans "Logout" %}'>
+</form>
+		<form action="/i18n/setlang/" method="post">{% csrf_token %}
+				<select name="language">
+					<option value="en">English (en)</option>
+					<option value="fr">Français (fr)</option>
+				</select>
+			<input type="submit" value="Go" />
+	</form>
+</fieldset>
+{% endblock %}
+
+{% block _action %}
+	{% block action %}{% endblock %}
+{% endblock %}
+
+{% block main %}
+	<h1>{% block title %}{% endblock %}</h1>
+	{% block content %}{% endblock %}
+{% endblock %}
+
+
+{% block menu %}
+{% if user.is_staff %}
+<ul>
+<li><a href='/user/'>{% trans "Users" %}</a></li>
+</ul>
+{% endif %}
+<ul>
+<li><a onclick="document.getElementById('recup_menu').style.display=''">{% trans "Manage rules" %}</a>
+			<ul id='recup_menu'  style='display: none'>
+			<li><a href='/network/'>{% trans "Networks" %}</a></li>
+			<li><a href='/test/'>{% trans "Test" %}</a></li>
+			</ul>
+</li>
+</ul>
+
+{% endblock %}

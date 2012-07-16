@@ -1,0 +1,62 @@
+{% load i18n %}
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>Pac Manager</title>
+                <link rel="stylesheet" href="/css/ads.css" type="text/css" title="ads">
+                <link rel="alternate stylesheet" href="/css/tiny.css" type="text/css" title="tiny">
+
+                <script type="text/javascript">
+		function init() {
+			toolTipInit();
+			var cookie = _cookie("style");
+			var title = (cookie ? cookie : getPreferredStyleSheet());
+			
+			document.getElementById(title).style.display='';
+			if (title == "ads") {
+				document.getElementById("tiny").style.display='none';
+			}
+			if (title == "tiny") {
+				document.getElementById("ads").style.display='none';
+			}
+		}
+
+
+                </script>
+        </head>
+        <body onload="init()">
+	<center>
+	<div id="ads"><div id='custom' onclick="document.getElementById('tiny').style.display='';document.getElementById('ads').style.display='none';setActiveStyleSheet('tiny');" style="text-align: right; padding-top: 10px; color: white"> &nbsp;</div></div></a>
+	<div style="display: none" id="tiny"><div id='custom' onclick="document.getElementById('tiny').style.display='none';setActiveStyleSheet('ads');document.getElementById('ads').style.display=''" style="text-align: right; padding-top: 10px; color: white">v1.92 @ localhost.localdomain&nbsp;</div></div></a>
+
+<div id="page">
+<div id='header'></div>
+<table class="gene" style="border: 0pt none ; margin: 0pt; padding: 0px; width: 100%;"><tbody><tr>
+<td class="menu">
+
+<div id=siteNav>
+     {% block menu %}{% endblock %}
+</div>
+</td>
+<td style="padding: 10px; vertical-align: top;">
+<div id='action'>
+{% block auth %}{% endblock %}
+<br>
+{% block _action %}{% endblock %}
+</div>
+
+     <div id='main'>
+     {% block main %}{% endblock %}
+     </div>
+
+
+</td></tr></tbody></table>
+<div id="footer"></div>
+
+</div>
+
+</center>
+</body>
+</html>
+
+
