@@ -46,7 +46,7 @@ def logon(request):
 				except:
 					ipsource = request.META['REMOTE_ADDR']
 				login(request, user)
-				send_mail('User connexion', username+" "+ipsource, 'admin@life-show.net',['fdurand@agglo-lorient.fr'], fail_silently=False)
+				send_mail('User connexion', username+" "+ipsource, 'admin@admin.net',['admin@admin.net'], fail_silently=False)
 				return HttpResponseRedirect("/network/")
 			else:
 				return render_to_response('logon.html',context_instance=RequestContext(request))
