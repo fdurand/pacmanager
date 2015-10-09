@@ -1,4 +1,4 @@
 pacmanager
 ==========
 
-Provide pac file to webbrother 
+Provide pac file to webbrowser 
